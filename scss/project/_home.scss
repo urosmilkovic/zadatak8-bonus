@@ -8,7 +8,6 @@
     display: flex;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -28,6 +27,7 @@
       border-radius: 8px;
       width: 400px;
       background-repeat: no-repeat;
+      z-index: 1000000;
     }
   }
   .header {
@@ -41,6 +41,9 @@
     border: 2px solid rgba(243, 243, 243, 0.4);
     padding: 20px;
     border-radius: 8px;
+    @include sm {
+      transform: scale(0.75);
+    }
   }
   .rps {
     color: $fcolor;
@@ -100,7 +103,11 @@
 
   .game {
     margin-top: 150px;
-    display: none;
+    @include sm {
+      transform: scale(0.7);
+      margin-top: 0;
+      z-index: 5000;
+    }
     .game-triangle {
       width: fit-content;
       margin: auto;
@@ -240,16 +247,25 @@
     margin-top: 80px;
     width: 65%;
     position: relative;
-    display: flex;
     z-index: 1;
+    @include md {
+      transform: scale(0.55);
+    }
     @include sm {
-      transform: scale(0.5);
+      width: 100%;
+      transform: scale(0.85);
+      :nth-child(2) {
+        order: 3;
+      }
     }
     .rps-table {
       width: 100%;
       display: flex;
       justify-content: space-around;
       text-align: center;
+      @include sm {
+        flex-wrap: wrap;
+      }
       .left-part {
         color: $fcolor;
         text-transform: uppercase;
@@ -296,6 +312,11 @@
   right: 40px;
   justify-content: flex-end;
   z-index: 2;
+  @include sm {
+    justify-content: center !important;
+    right: 0;
+    bottom: 170px;
+  }
   button {
     padding: 5px 15px;
     background: none;
@@ -310,7 +331,84 @@
     color: $primary;
   }
 }
-.rules:hover,
+.brules:hover,
 .play-button:hover {
   cursor: pointer;
+}
+
+.darken {
+  background: rgba(10, 9, 9, 0.7);
+}
+
+.showF {
+  display: flex;
+}
+
+.showB {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.position {
+  top: 130px !important;
+  left: 85px !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  position: relative !important;
+}
+.winner-hover {
+  display: none;
+  height: 217px;
+  width: 217px;
+  padding: 24px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 24px solid #ffffff4a;
+  border-radius: 50%;
+  top: 85px;
+  left: 85px;
+  z-index: 333;
+}
+
+.house-hover {
+  display: none;
+  height: 217px;
+  width: 217px;
+  padding: 24px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 24px solid #ffffff4a;
+  border-radius: 50%;
+  top: 85px;
+  left: 85px;
+  z-index: 333;
+}
+
+.circle-hover-first {
+  height: 263px;
+  width: 264px;
+  padding: 24px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 24px solid #ffffff2b;
+  border-radius: 50%;
+  top: 84px;
+  left: 85px;
+  z-index: 333;
+}
+
+.circle-hover-second {
+  height: 310px;
+  width: 312px;
+  padding: 24px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 24px solid #e3e5ed08;
+  border-radius: 50%;
+  top: 107px;
+  left: 108px;
+  z-index: 333;
 }

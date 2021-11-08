@@ -17,6 +17,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/app.js" defer></script>
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
@@ -205,13 +206,12 @@
         </div>
         <div class="score">
           <div class="pscore">score</div>
-          <div class="result">12</div>
+          <div class="result">0</div>
         </div>
       </div>
-      <div class="game">
+      <div class="game showB">
         <div class="game-triangle">
           <img src="./images/bg-triangle.svg" alt="" />
-
           <div class="game-circle-paper circle">
             <div class="hover-circle-paper"></div>
             <div class="paper-image image">
@@ -232,13 +232,18 @@
           </div>
         </div>
       </div>
-      <div class="game-table">
+      <div class="game-table hide">
         <div class="rps-table">
           <div class="left-part">
             you picked
             <div class="rps-pick">
               <div class="game-circle-paper circle picked">
                 <div class="hover-circle-paper"></div>
+                <div class="winner-hover">
+                  <div class="circle-hover-first">
+                    <div class="circle-hover-second"></div>
+                  </div>
+                </div>
                 <div class="paper-image image">
                   <img src="./images/icon-paper.svg" alt="" />
                 </div>
@@ -246,13 +251,18 @@
             </div>
           </div>
           <div class="center">
-            you win <button class="play-button">play again</button>
+            <button class="play-button"></button>
           </div>
           <div class="right-part">
             the house picked
             <div class="pick-random">
               <div class="game-circle-paper circle picked">
-                <div class="hover-circle-paper pickedh"></div>
+                <div class="hover-circle-paper picked"></div>
+                <div class="house-hover">
+                  <div class="circle-hover-first">
+                    <div class="circle-hover-second"></div>
+                  </div>
+                </div>
                 <div class="paper-image image">
                   <img src="./images/icon-paper.svg" alt="" />
                 </div>
@@ -263,7 +273,7 @@
       </div>
     </div>
     <div class="footer-btn">
-      <button class="rules">RULES</button>
+      <button class="brules">RULES</button>
     </div>
   </body>
 </html>
