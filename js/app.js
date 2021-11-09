@@ -12,6 +12,7 @@ var result = 0;
 
 buttonRules.addEventListener("click", () => {
   modcontent.style.display = "flex";
+  game.style.zIndex = "0";
   gameTable.style.zIndex = "0";
   modal.classList.add("darken");
   hCircle.forEach((x) => {
@@ -22,6 +23,7 @@ buttonRules.addEventListener("click", () => {
 closeW.addEventListener("click", () => {
   modcontent.style.display = "none";
   modal.classList.remove("darken");
+  game.style.zIndex = "1";
   gameTable.style.zIndex = "1";
   hCircle.forEach((x) => {
     x.style.zIndex = "1";

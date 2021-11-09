@@ -57,7 +57,11 @@ h4 {
       border-radius: 8px;
       width: 400px;
       background-repeat: no-repeat;
-      z-index: 1000000; }
+      z-index: 9999; }
+      @media (max-width: 576px) {
+        .main-container .modal .modal-content {
+          transform: scale(0.75);
+          z-index: 10000; } }
   .main-container .header {
     display: flex;
     justify-content: space-between;
@@ -301,7 +305,7 @@ h4 {
     .footer-btn {
       justify-content: center !important;
       right: 0;
-      bottom: 20vh; } }
+      bottom: 10vh; } }
   .footer-btn button {
     padding: 5px 15px;
     background: none;
