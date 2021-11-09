@@ -105,7 +105,7 @@
     margin-top: 150px;
     @include sm {
       transform: scale(0.7);
-      margin-top: 0;
+      margin-top: 50px;
       z-index: 5000;
     }
     .game-triangle {
@@ -252,6 +252,7 @@
       transform: scale(0.55);
     }
     @include sm {
+      margin-top: 0px;
       width: 100%;
       transform: scale(0.85);
       :nth-child(2) {
@@ -315,7 +316,7 @@
   @include sm {
     justify-content: center !important;
     right: 0;
-    bottom: 170px;
+    bottom: 20vh;
   }
   button {
     padding: 5px 15px;
