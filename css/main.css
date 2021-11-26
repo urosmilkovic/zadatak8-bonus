@@ -268,11 +268,17 @@ h4 {
         text-transform: uppercase;
         font-weight: 500;
         font-size: 24px; }
+        @media (max-width: 576px) {
+          .main-container .game-table .rps-table .left-part .left-text {
+            display: none; } }
       .main-container .game-table .rps-table .right-part {
         color: #f3f3f3;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 24px; }
+        @media (max-width: 576px) {
+          .main-container .game-table .rps-table .right-part .right-text {
+            display: none; } }
       .main-container .game-table .rps-table .center {
         color: #f3f3f3;
         text-transform: uppercase;
@@ -390,3 +396,20 @@ h4 {
   top: 107px;
   left: 108px;
   z-index: 333; }
+
+.right-text-phone {
+  display: none; }
+  @media (max-width: 576px) {
+    .right-text-phone {
+      position: relative;
+      bottom: -55px;
+      display: block; } }
+
+.left-text-phone {
+  display: none; }
+  @media (max-width: 576px) {
+    .left-text-phone {
+      position: relative;
+      bottom: -55px;
+      left: -10px;
+      display: block; } }

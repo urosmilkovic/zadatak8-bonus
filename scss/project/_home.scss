@@ -276,12 +276,22 @@
         text-transform: uppercase;
         font-weight: 500;
         font-size: 24px;
+        @include sm {
+          .left-text {
+            display: none;
+          }
+        }
       }
       .right-part {
         color: $fcolor;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 24px;
+        @include sm {
+          .right-text {
+            display: none;
+          }
+        }
       }
 
       .center {
@@ -416,4 +426,23 @@
   top: 107px;
   left: 108px;
   z-index: 333;
+}
+
+.right-text-phone {
+  display: none;
+  @include sm {
+    position: relative;
+    bottom: -55px;
+    display: block;
+  }
+}
+
+.left-text-phone {
+  display: none;
+  @include sm {
+    position: relative;
+    bottom: -55px;
+    left: -10px;
+    display: block;
+  }
 }
