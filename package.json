@@ -1,0 +1,16 @@
+{
+  "name": "zadatak5-bonus",
+  "version": "1.0.0",
+  "description": "**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass --watch scss -o css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "node-sass": "^6.0.1"
+  }
+}
